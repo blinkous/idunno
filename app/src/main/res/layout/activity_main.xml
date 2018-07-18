@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/congrats4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="well not technically."
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:fontFamily="@font/amatic_sc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <TextView
+        android:id="@+id/congrats5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this app does nothing."
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:fontFamily="@font/amatic_sc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:background="@android:color/white"
+        android:onClick="startNow"
+
+        android:text="start"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startButton2"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="488dp"
+        android:background="@android:color/white"
+        android:onClick="mysteryNow"
+
+        android:text="mystery button"
+        android:textColor="#464646"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="388dp"
+        android:background="@android:color/white"
+        android:onClick="door3Now"
+
+        android:text="start"
+        android:textColor="@color/colorAccent2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="272dp"
+        android:background="@android:color/white"
+
+        android:onClick="door2Go"
+        android:text="start"
+        android:textColor="@color/colorAccent3"
+        app:layout_constraintBottom_toTopOf="@+id/startButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/letsdraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="272dp"
+        android:background="@android:color/white"
+        android:onClick="letsDrawColor"
+        android:text="myColor"
+        android:textColor="@color/colorAccent3"
+        app:layout_constraintEnd_toStartOf="@+id/startButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/letsdraw2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="160dp"
+        android:background="@android:color/white"
+        android:onClick="letsDraw"
+        android:text="Draw"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/startButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
