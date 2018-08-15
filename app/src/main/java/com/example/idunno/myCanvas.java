@@ -23,6 +23,7 @@ public class myCanvas extends AppCompatActivity {
     /*Paint code from https://medium.com/@ssaurel/learn-to-create-a-paint-application-for-android-5b16968063f8*/
     private static PaintView myPaintView;
     private int newSize;
+    private final SeekbarAlert seekbarAlert = new SeekbarAlert(this, "Pick a size");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,37 +61,41 @@ public class myCanvas extends AppCompatActivity {
     }
 
     public void changeBrushSize(View view) {
-        /**Creating an alert dialog using the builder and myAlertStyle defined in styles.xml**/
-        AlertDialog.Builder builder = new AlertDialog.Builder(myCanvas.this, R.style.myAlertStyle);
-        builder.setTitle(R.string.alert_mess);
-
-        final SeekBar seekbar = new SeekBar(this);
-        /**Setting the current seekbar progress to the current size of the brush**/
-        seekbar.setProgress(myPaintView.getSize());
-        /**Setting the view of the alert dialog to the seekbar**/
-        builder.setView(seekbar);
-
-        /**Setting the seekbar listener to capture when the user changes the progress to change the brush size**/
-        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                newSize = progress*2;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                myPaintView.setSize(newSize);
-            }
-        });
-
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        seekbarAlert.build();
+        newSize = seekbarAlert.getSeekbarProgress();
+        myPaintView.setSize(newSize);
+//
+//        /**Creating an alert dialog using the builder and myAlertStyle defined in styles.xml**/
+//        AlertDialog.Builder builder = new AlertDialog.Builder(myCanvas.this, R.style.myAlertStyle);
+//        builder.setTitle(R.string.alert_mess);
+//
+//        final SeekBar seekbar = new SeekBar(this);
+//        /**Setting the current seekbar progress to the current size of the brush**/
+//        seekbar.setProgress(myPaintView.getSize());
+//        /**Setting the view of the alert dialog to the seekbar**/
+//        builder.setView(seekbar);
+//
+//        /**Setting the seekbar listener to capture when the user changes the progress to change the brush size**/
+//        seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+//                newSize = progress*2;
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//                myPaintView.setSize(newSize);
+//            }
+//        });
+//
+//
+//        AlertDialog dialog = builder.create();
+//        dialog.show();
     }
 
 }

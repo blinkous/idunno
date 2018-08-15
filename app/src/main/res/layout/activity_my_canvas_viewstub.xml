@@ -53,4 +53,12 @@
 
     </LinearLayout>
 
+    <ViewStub android:id="@+id/seekbarStub"
+        android:inflatedId="@+id/subTree"
+        android:layout="@layout/my_stub"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"/>
+
+
 </RelativeLayout>
