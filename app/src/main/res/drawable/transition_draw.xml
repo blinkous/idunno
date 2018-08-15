@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/pokegif"
+        android:id="@+id/trans_draws1" />
+    <item
+        android:drawable="@drawable/pooh_and_piglet"
+        android:id="@+id/trans_draws2" />
+</transition>

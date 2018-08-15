@@ -4,130 +4,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:id="@+id/mainLayout"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/congrats4"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="well not technically."
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:fontFamily="@font/amatic_sc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
 
-    <TextView
-        android:id="@+id/congrats5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="this app does nothing."
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        app:fontFamily="@font/amatic_sc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048" />
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/homeMessage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="this app does nothing."
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp"
+            android:layout_centerHorizontal="true"
+            app:fontFamily="@font/amatic_sc"/>
+
+        <TextView
+            android:id="@+id/homeMessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="well not technically."
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/homeMessage1"
+            android:paddingBottom="8dp"
+            app:fontFamily="@font/amatic_sc"
+/>
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:text="Switch \n Color"
+            android:onClick="switchTheme"
+            android:textColor="@color/gray"/>
+
+        <LinearLayout
+            android:id="@+id/main_lin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeMessage2"
+            android:background="@color/colorPrimary"
+            android:padding="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:onClick="door1"
+                app:srcCompat="@drawable/pokegif" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:onClick="door2"
+                app:srcCompat="@drawable/pooh_eeyore" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:onClick="door3"
+                app:srcCompat="@drawable/broken_ketchup" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/startButton"
+        android:id="@+id/drawButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:background="@android:color/white"
-        android:onClick="startNow"
-
-        android:text="start"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/startButton2"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="488dp"
-        android:background="@android:color/white"
-        android:onClick="mysteryNow"
-
-        android:text="mystery button"
-        android:textColor="#464646"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/startButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="388dp"
-        android:background="@android:color/white"
-        android:onClick="door3Now"
-
-        android:text="start"
-        android:textColor="@color/colorAccent2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/startButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="272dp"
-        android:background="@android:color/white"
-
-        android:onClick="door2Go"
-        android:text="start"
-        android:textColor="@color/colorAccent3"
-        app:layout_constraintBottom_toTopOf="@+id/startButton2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/letsdraw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="272dp"
-        android:background="@android:color/white"
-        android:onClick="letsDrawColor"
-        android:text="myColor"
-        android:textColor="@color/colorAccent3"
-        app:layout_constraintEnd_toStartOf="@+id/startButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/letsdraw2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginBottom="124dp"
         android:background="@android:color/white"
         android:onClick="letsDraw"
         android:text="Draw"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintEnd_toStartOf="@+id/startButton"
+        android:textColor="@color/purple"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/mysteryButton"
+        android:layout_width="140dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginTop="296dp"
+        android:background="@drawable/test_draw"
+        android:onClick="mysteryNow"
+        android:text="mystery button"
+        android:textColor="@color/my_button"
+        app:layout_constraintBottom_toTopOf="@+id/drawButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageView
+        android:id="@+id/mysteryImageAndy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:onClick="mysteryNow"
+        app:layout_constraintBottom_toTopOf="@+id/mysteryButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/testingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:onClick="testing"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
 
 </android.support.constraint.ConstraintLayout>

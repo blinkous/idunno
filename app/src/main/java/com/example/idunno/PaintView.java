@@ -50,8 +50,12 @@ public class PaintView extends View {
         return currentColor;
     }
 
-    public void setSize(){
+    public void setSize(int newSize){
+        strokeWidth = newSize;
+    }
 
+    public int getSize(){
+        return strokeWidth;
     }
 
     //Copied Methods

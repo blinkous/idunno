@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="size_array">10,20,30,40,50</string-array>
+    <array name="color_array">
+        <item>#000</item>
+        <item>@color/purple</item>
+        <item>@color/darkPurple</item>
+        <item>@color/darkBlue</item>
+        <item>@color/darkGreen</item>
+        <item>@color/white</item>
+    </array>
+</resources>

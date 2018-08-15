@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">I DUNNO</string>
+    <string name="alert_mess">Pick a Brush Size</string>
+    <string name="ok">okiedokie</string>
+    <string name="cancel">no thanks</string>
+    <string name="title_activity_start">Start</string>
+    <string name="congrats1">Congrats, you clicked on an image.</string>
 </resources>

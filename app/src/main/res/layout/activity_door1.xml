@@ -4,32 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".startAgain">
+    tools:context=".door1">
 
     <TextView
-        android:id="@+id/congrats3"
+        android:id="@+id/congrats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I'll just leave this here..."
-        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp"
+        android:text="@string/congrats1"
+        android:textColor="@android:color/black"
         android:textSize="25sp"
         app:fontFamily="@font/amatic_sc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.291" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="73dp"
-        android:layout_marginTop="60dp"
+        android:scaleType="centerCrop"
+        android:foregroundGravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/congrats3"
-        app:srcCompat="@drawable/broken_ketchup" />
+        app:layout_constraintTop_toBottomOf="@+id/congrats"
+        app:srcCompat="@drawable/transition_draw"
+        android:onClick="transition"/>
+
+
 </android.support.constraint.ConstraintLayout>

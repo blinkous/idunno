@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".myList">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+            android:id="@+id/activity_item1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/broken_ketchup" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:background="@color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/image1"
+                android:text="Pikachu"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:background="@color/transparent"
+                android:layout_toRightOf="@id/image1"
+                android:layout_below="@id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mouse pokemon"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:background="@color/transparent"
+                android:layout_toRightOf="@id/image1"
+                android:layout_below="@id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heartbroken over broken ketchup"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image2"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image2"
+                    android:layout_below="@id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image2"
+                    android:layout_below="@id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/mytext1"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image3"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/mytext2"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image3"
+                    android:layout_below="@id/mytext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/mytext3"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image3"
+                    android:layout_below="@id/mytext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/activity_testing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/myimage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/mytext1"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/myimage"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/mytext2"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/myimage"
+                    android:layout_below="@id/mytext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/mytext3"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/myimage"
+                    android:layout_below="@id/mytext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/activity_item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image1"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image1"
+                    android:layout_below="@id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image1"
+                    android:layout_below="@id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image2"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image2"
+                    android:layout_below="@id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image2"
+                    android:layout_below="@id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/mytext1"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image3"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/mytext2"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image3"
+                    android:layout_below="@id/mytext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/mytext3"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/image3"
+                    android:layout_below="@id/mytext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/activity_testing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/myimage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/broken_ketchup" />
+
+                <TextView
+                    android:id="@+id/mytext1"
+                    android:background="@color/transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/myimage"
+                    android:text="Pikachu"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/mytext2"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/myimage"
+                    android:layout_below="@id/mytext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mouse pokemon"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/mytext3"
+                    android:background="@color/transparent"
+                    android:layout_toRightOf="@id/myimage"
+                    android:layout_below="@id/mytext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heartbroken over broken ketchup"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

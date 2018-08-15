@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".door2">
+    tools:context=".door3">
 
     <TextView
-        android:id="@+id/congrats2"
+        android:id="@+id/congrats3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BOO YOU."
+        android:text="I'll just leave this here..."
         android:textColor="@android:color/black"
         android:textSize="25sp"
         app:fontFamily="@font/amatic_sc"
@@ -21,16 +21,15 @@
         app:layout_constraintVertical_bias="0.288" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="111dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginBottom="73dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/congrats2"
-        app:srcCompat="@drawable/pooh_eeyore" />
+        app:layout_constraintTop_toBottomOf="@+id/congrats3"
+        app:srcCompat="@drawable/broken_ketchup" />
 </android.support.constraint.ConstraintLayout>
