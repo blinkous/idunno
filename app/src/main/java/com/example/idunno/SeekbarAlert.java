@@ -8,6 +8,7 @@ import android.widget.SeekBar;
 
 public class SeekbarAlert {
     private int currentProgress = 0;
+//    private int oldOne = 0;
     private Context mContext;
     private String mAlertMessage = "";
     private int mTheme;
@@ -58,7 +59,7 @@ public class SeekbarAlert {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
+//                currentProgress = oldOne;
             }
         });
         AlertDialog dialog = builder.create();
@@ -67,6 +68,9 @@ public class SeekbarAlert {
 
     public int getSeekbarProgress() {
         return currentProgress;
+    }
+    public void setCurrentProgress(int progress){
+        currentProgress = progress;
     }
 }
 
