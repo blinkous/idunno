@@ -1,6 +1,8 @@
 package com.example.idunno;
 
+import android.animation.Animator;
 import android.graphics.Color;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.TransitionDrawable;
@@ -18,6 +20,14 @@ public class TestingGradients extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testing_gradients);
+
+        ImageView image = (ImageView) findViewById(R.id.backImage);
+        image.setBackgroundResource(R.drawable.grad_anim);
+
+        Drawable rocketAnimation = image.getBackground();
+        if (rocketAnimation instanceof Animatable) {
+            ((Animatable)rocketAnimation).start();
+        }
 
         /**
          * creates an oval gradient using the colors array
@@ -78,10 +88,11 @@ public class TestingGradients extends AppCompatActivity {
 
     }
 
-    public void changeGradient(View view){
-        /**
+    /*public void changeGradient(View view){
+        *//**
          * Attempting to creating a background of transitioning drawables
-         */
+         * only iterates once, the loop doesn't restart the transitions
+         *//*
 
         ImageView image1 = (ImageView) findViewById(R.id.gradImage1);
         Drawable drawable1 = image1.getDrawable();
@@ -92,36 +103,14 @@ public class TestingGradients extends AppCompatActivity {
         ImageView image3 = (ImageView) findViewById(R.id.gradImage3);
         Drawable drawable3 = image3.getDrawable();
 
-//        int i = 0;
-/*        while(i < 100) {
-            //Using a transition drawable
-            switch (transition){
-                case 1:
-                    image2.setImageAlpha(0);
-                    image3.setImageAlpha(0);
-                    image1.setImageAlpha(1);
-                    ((TransitionDrawable) drawable1).startTransition(5000);
-                    transition = 2;
-                    break;
-                case 2:
-                    image1.setImageAlpha(0);
-                    image3.setImageAlpha(0);
-                    image2.setImageAlpha(1);
-                    ((TransitionDrawable) drawable2).startTransition(5000);
-                    transition = 3;
-                    break;
-                case 3:
-                    image2.setImageAlpha(0);
-                    image1.setImageAlpha(0);
-                    image3.setImageAlpha(1);
-                    ((TransitionDrawable) drawable3).startTransition(5000);
-                    transition = 1;
-                    break;
-            } i++;
-        }*/
+        int i = 0;
+
+        while (i < 10) {
+            ((TransitionDrawable) drawable1).resetTransition();
+            ((TransitionDrawable) drawable2).resetTransition();
+            ((TransitionDrawable) drawable3).resetTransition();
 
             //Using a transition drawable
-        for(int i = 0; i < 100; i++) {
             image2.setImageAlpha(0);
             image3.setImageAlpha(0);
             image1.setImageAlpha(1);
@@ -136,7 +125,9 @@ public class TestingGradients extends AppCompatActivity {
             image1.setImageAlpha(0);
             image3.setImageAlpha(1);
             ((TransitionDrawable) drawable3).startTransition(500);
+
+            i++;
         }
-    }
+    }*/
 
 }

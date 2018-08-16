@@ -14,7 +14,8 @@
         android:layout_height="match_parent"
         android:foregroundGravity="center" />-->
 
-    <ImageView
+<!--These imageViews are for the transition drawables-->
+<!--    <ImageView
         android:id="@+id/gradImage1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +29,12 @@
         android:id="@+id/gradImage3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/transition_draw_gradients3"/>
+        android:src="@drawable/transition_draw_gradients3"/>-->
+
+    <ImageView
+        android:id="@+id/backImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <ImageView
         android:id="@+id/myRingWhite"
@@ -45,7 +51,6 @@
         android:text="Oh no"
         android:textColor="@color/colorPrimary"
         android:textSize="100sp"
-        android:onClick="changeGradient"
         android:fontFamily="@font/mellony_dry_brush"/>
 
 </RelativeLayout>
