@@ -92,7 +92,7 @@ public class TestingGradients extends AppCompatActivity {
         ImageView image3 = (ImageView) findViewById(R.id.gradImage3);
         Drawable drawable3 = image3.getDrawable();
 
-        int i = 0;
+//        int i = 0;
 /*        while(i < 100) {
             //Using a transition drawable
             switch (transition){
@@ -120,8 +120,8 @@ public class TestingGradients extends AppCompatActivity {
             } i++;
         }*/
 
-
             //Using a transition drawable
+        for(int i = 0; i < 100; i++) {
             image2.setImageAlpha(0);
             image3.setImageAlpha(0);
             image1.setImageAlpha(1);
@@ -136,7 +136,7 @@ public class TestingGradients extends AppCompatActivity {
             image1.setImageAlpha(0);
             image3.setImageAlpha(1);
             ((TransitionDrawable) drawable3).startTransition(500);
-
+        }
     }
 
 }
