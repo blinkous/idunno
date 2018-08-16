@@ -74,6 +74,10 @@ public class TestingGradients extends AppCompatActivity {
         ImageView iv = (ImageView) findViewById(R.id.myRing);
         iv.setBackground(rect);*/
 
+        /**
+         * Attempting to creating a background of transitioning drawables
+         */
+
         ImageView image1 = (ImageView) findViewById(R.id.gradImage1);
         Drawable drawable1 = image1.getDrawable();
 
