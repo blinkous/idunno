@@ -6,6 +6,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -74,6 +75,10 @@ public class TestingGradients extends AppCompatActivity {
         ImageView iv = (ImageView) findViewById(R.id.myRing);
         iv.setBackground(rect);*/
 
+
+    }
+
+    public void changeGradient(View view){
         /**
          * Attempting to creating a background of transitioning drawables
          */
@@ -88,29 +93,50 @@ public class TestingGradients extends AppCompatActivity {
         Drawable drawable3 = image3.getDrawable();
 
         int i = 0;
-        while(i++ < 100) {
+/*        while(i < 100) {
             //Using a transition drawable
             switch (transition){
                 case 1:
                     image2.setImageAlpha(0);
                     image3.setImageAlpha(0);
-                    ((TransitionDrawable) drawable1).startTransition(1000);
+                    image1.setImageAlpha(1);
+                    ((TransitionDrawable) drawable1).startTransition(5000);
                     transition = 2;
                     break;
                 case 2:
                     image1.setImageAlpha(0);
                     image3.setImageAlpha(0);
-                    ((TransitionDrawable) drawable2).startTransition(1000);
+                    image2.setImageAlpha(1);
+                    ((TransitionDrawable) drawable2).startTransition(5000);
                     transition = 3;
                     break;
                 case 3:
                     image2.setImageAlpha(0);
                     image1.setImageAlpha(0);
-                    ((TransitionDrawable) drawable3).startTransition(1000);
+                    image3.setImageAlpha(1);
+                    ((TransitionDrawable) drawable3).startTransition(5000);
                     transition = 1;
                     break;
-            }
-        }
+            } i++;
+        }*/
+
+
+            //Using a transition drawable
+            image2.setImageAlpha(0);
+            image3.setImageAlpha(0);
+            image1.setImageAlpha(1);
+            ((TransitionDrawable) drawable1).startTransition(500);
+
+            image1.setImageAlpha(0);
+            image3.setImageAlpha(0);
+            image2.setImageAlpha(1);
+            ((TransitionDrawable) drawable2).startTransition(500);
+
+            image2.setImageAlpha(0);
+            image1.setImageAlpha(0);
+            image3.setImageAlpha(1);
+            ((TransitionDrawable) drawable3).startTransition(500);
+
     }
 
 }

@@ -45,6 +45,7 @@
         android:text="Oh no"
         android:textColor="@color/colorPrimary"
         android:textSize="100sp"
+        android:onClick="changeGradient"
         android:fontFamily="@font/mellony_dry_brush"/>
 
 </RelativeLayout>
