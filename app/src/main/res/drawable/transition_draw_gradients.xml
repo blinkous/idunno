@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:drawable="@drawable/multi_gradient"
+        android:id="@+id/grad_trans1" />
+    <item
+        android:drawable="@drawable/multi_gradient2"
+        android:id="@+id/grad_trans2" />
+</transition>

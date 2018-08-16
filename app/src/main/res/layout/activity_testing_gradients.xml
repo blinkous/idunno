@@ -15,6 +15,22 @@
         android:foregroundGravity="center" />-->
 
     <ImageView
+        android:id="@+id/gradImage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/transition_draw_gradients"/>
+    <ImageView
+        android:id="@+id/gradImage2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/transition_draw_gradients2"/>
+    <ImageView
+        android:id="@+id/gradImage3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/transition_draw_gradients3"/>
+
+    <ImageView
         android:id="@+id/myRingWhite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
