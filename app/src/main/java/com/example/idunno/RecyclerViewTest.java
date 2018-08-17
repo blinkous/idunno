@@ -1,6 +1,12 @@
 package com.example.idunno;
 
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.support.constraint.ConstraintLayout;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -21,7 +27,11 @@ public class RecyclerViewTest extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 //    private String[] myDataset = {"boo", "you", "ha", "ha"};
     private ArrayList<String> myDataset = new ArrayList<>();
-    private ArrayList<Image> myImageViews;
+
+//    private ArrayList<Drawable> myImages;
+//    Resources res = getResources();
+//    Drawable image = ResourcesCompat.getDrawable(res, R.drawable.broken_ketchup,getTheme());
+//    Drawable image3 = ResourcesCompat.getDrawable(res, R.drawable.pooh_eeyore,getTheme());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +40,12 @@ public class RecyclerViewTest extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
 //        ArrayList<String> myDataset = new ArrayList<>();
-        myDataset.add("boo");
-        myDataset.add("boo");
-        myDataset.add("boo");
-        myDataset.add("boo");
+        for(int i = 0; i < 60; i++){
+            myDataset.add("BOO");
+        }
 
-//        myImageViews.add(R.drawable.broken_ketchup);
+//        myImages.add(image);
+//        myImages.add(image3);
 
 
         // use this setting to improve performance if you know that changes
@@ -44,7 +54,7 @@ public class RecyclerViewTest extends AppCompatActivity {
 
         // use a linear layout manager, you can also use a grid layout or specify your own
         // when using grid layout, you must specify at least a span count
-        mLayoutManager = new GridLayoutManager(this, 3);
+        mLayoutManager = new GridLayoutManager(this, 4);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)

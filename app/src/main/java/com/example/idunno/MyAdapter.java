@@ -1,5 +1,6 @@
 package com.example.idunno;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<String> mDataset;
+    private int mTextColor = 1;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -16,10 +18,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView mTextView;
+
         public ViewHolder(TextView v) {
             super(v);
             mTextView = (TextView) v.findViewById(R.id.rTextView);
         }
+
         public TextView getTextView() {
             return mTextView;
         }
@@ -36,6 +40,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // create a new view
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
+        switch (mTextColor) {
+            case 1:
+                v.setTextColor(Color.rgb(255, 136, 0));
+                mTextColor = 2;
+                break;
+            case 2:
+                v.setTextColor(Color.rgb(176, 66, 244));
+                mTextColor = 3;
+                break;
+            default:
+                v.setTextColor(Color.rgb(0,0,0));
+                mTextColor = 1;
+        }
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -54,6 +71,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     public int getItemCount() {
         return mDataset.size();
     }
+
 
     //Extend RecyclerView.ItemAnimator to change the animation
 }
