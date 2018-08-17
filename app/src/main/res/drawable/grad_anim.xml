@@ -3,11 +3,11 @@
     android:oneshot="false">
     <item
         android:drawable="@drawable/multi_gradient"
-        android:duration="200" />
+        android:duration="300" />
     <item
         android:drawable="@drawable/multi_gradient2"
-        android:duration="200" />
+        android:duration="300" />
     <item
         android:drawable="@drawable/multi_gradient3"
-        android:duration="200" />
+        android:duration="300" />
 </animation-list>

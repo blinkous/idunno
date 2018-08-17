@@ -23,6 +23,7 @@ public class myCanvas extends AppCompatActivity {
     /*PaintView and FingerPath code from https://medium.com/@ssaurel/learn-to-create-a-paint-application-for-android-5b16968063f8*/
     private static PaintView myPaintView;
     private int newSize;
+    //Still need to work on SeekbarAlert, it won't take a string resource as a title
     private final SeekbarAlert seekbarAlert = new SeekbarAlert(this, "Select a size", R.style.myAlertStyle);
 
     @Override

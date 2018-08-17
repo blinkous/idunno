@@ -9,8 +9,11 @@ import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class TestingGradients extends AppCompatActivity {
 
@@ -21,12 +24,16 @@ public class TestingGradients extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testing_gradients);
 
+        /**
+         * Sets a background image view to use a view animator to display a
+         * set of 3 gradient images
+         */
         ImageView image = (ImageView) findViewById(R.id.backImage);
         image.setBackgroundResource(R.drawable.grad_anim);
 
-        Drawable rocketAnimation = image.getBackground();
-        if (rocketAnimation instanceof Animatable) {
-            ((Animatable)rocketAnimation).start();
+        Drawable gradientAnimation = image.getBackground();
+        if (gradientAnimation instanceof Animatable) {
+            ((Animatable)gradientAnimation).start();
         }
 
         /**
@@ -86,6 +93,12 @@ public class TestingGradients extends AppCompatActivity {
         iv.setBackground(rect);*/
 
 
+    }
+
+    public void clickedOhNo(View view){
+        ImageView image = (ImageView) findViewById(R.id.myRingWhite);
+        Animation hyperspaceJump = AnimationUtils.loadAnimation(this, R.anim.animm);
+        image.startAnimation(hyperspaceJump);
     }
 
     /*public void changeGradient(View view){

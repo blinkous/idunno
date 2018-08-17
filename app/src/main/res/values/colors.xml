@@ -26,6 +26,6 @@
 
     <color name="white">#fff</color>
     <color name="colorDarkTransparent">#32000000</color>
-    <color name="colorLightTransparent">#dcffffff</color>
+    <color name="colorLightTransparent">#8bffffff</color>
     <color name="transparent">#00ffffff</color>
 </resources>
