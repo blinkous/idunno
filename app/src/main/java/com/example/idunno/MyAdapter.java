@@ -1,10 +1,13 @@
 package com.example.idunno;
 
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.content.res.Resources;
 
 import java.util.ArrayList;
 
@@ -40,17 +43,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // create a new view
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
+        /**
+         * Alternating the color of the text displayed from mDataset using a switch
+         */
         switch (mTextColor) {
             case 1:
-                v.setTextColor(Color.rgb(255, 136, 0));
+                v.setTextColor(Color.rgb(255, 136, 0));     //orange
+                /**
+                 * Trying ot use a color state list to change the color of the text instead of using a literal color value
+                 */
+//                Resources res = getResources();
+//                v.setTextColor(ResourcesCompat.getColor(R.colors.purple));
                 mTextColor = 2;
                 break;
             case 2:
-                v.setTextColor(Color.rgb(176, 66, 244));
+            v.setTextColor(Color.rgb(176, 66, 244));        //purple
                 mTextColor = 3;
                 break;
             default:
-                v.setTextColor(Color.rgb(0,0,0));
+                v.setTextColor(Color.rgb(0,0,0));           //black
                 mTextColor = 1;
         }
         ViewHolder vh = new ViewHolder(v);
