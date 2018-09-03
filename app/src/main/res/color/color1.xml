@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:color="@color/purple"/> <!-- pressed -->
+    <item android:color="@color/purple"/> <!-- default goes on the bottom because the selector iterates through the cases like switch-->
+</selector>
