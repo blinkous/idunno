@@ -35,7 +35,8 @@
         <activity android:name=".TestingGradients" />
         <activity android:name=".myCanvasViewStub" />
         <activity android:name=".BooRecyclerView" />
-        <activity android:name=".RecyclerViewTest"></activity>
+        <activity android:name=".RecyclerViewTest" />
+        <activity android:name=".SendText"></activity>
     </application>
 
 </manifest>

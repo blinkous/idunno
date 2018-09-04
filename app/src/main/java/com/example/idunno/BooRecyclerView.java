@@ -1,13 +1,18 @@
 package com.example.idunno;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
+
+import junit.framework.Test;
 
 import java.util.ArrayList;
 
@@ -71,8 +76,21 @@ public class BooRecyclerView extends AppCompatActivity {
                         mTextColor = 1;
                 }
                 ViewHolder vh = new ViewHolder(v);
+
+                /**
+                 * Creating an on click listener so that each item of the list opens TestingGradients
+                 */
+                v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(BooRecyclerView.this, TestingGradients.class);
+                        startActivity(intent);
+                    }
+                });
+
                 return vh;
             }
+
         };
         mRecyclerView.setAdapter(mAdapter);
 
