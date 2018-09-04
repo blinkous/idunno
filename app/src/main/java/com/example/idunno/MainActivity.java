@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void testing(View view){
-        Intent intent = new Intent(this, RecyclerViewTest.class);
+        Intent intent = new Intent(this, BooRecyclerView.class);
         startActivity(intent);
     }
 
