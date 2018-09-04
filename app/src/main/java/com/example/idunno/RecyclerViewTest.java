@@ -2,6 +2,7 @@ package com.example.idunno;
 
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -42,7 +43,7 @@ public class RecyclerViewTest extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         /** Adding items to my Arraylist that will be displayed in the recycler view*/
-        myDataset.add("")
+//        myDataset.add("Gradients", )
 
 
         // use this setting to improve performance if you know that changes
