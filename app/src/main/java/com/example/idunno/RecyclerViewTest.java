@@ -59,18 +59,22 @@ public class RecyclerViewTest extends AppCompatActivity {
         mAdapter = new MyAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 
-        mRecyclerView.setOnClickListener(new AdapterView.OnClickListener(){
-            @Override
-            public void onClickItem (AdapterView<?> adapterView, View view, int position, long id){
-                Intent intent = new Intent(this, .class);
-                startActivity(intent);
-
-                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    mMediaPlayer = MediaPlayer.create(NumbersActivity.this, words.get(position).getMediaResourceId());
-                    mMediaPlayer.start();
-                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
-                }
-            }
-        });
+        /**
+         * Creating an on click listener so that each item of the list can open its
+         * activity and layout
+         */
+//        mRecyclerView.setOnClickListener(new AdapterView.OnClickListener(){
+//            @Override
+//            public void onClickItem (AdapterView<?> adapterView, View view, int position, long id){
+//                Intent intent = new Intent(this, .class);
+//                startActivity(intent);
+//
+//                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+//                    mMediaPlayer = MediaPlayer.create(NumbersActivity.this, words.get(position).getMediaResourceId());
+//                    mMediaPlayer.start();
+//                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
+//                }
+//            }
+//        });
     }
 }
