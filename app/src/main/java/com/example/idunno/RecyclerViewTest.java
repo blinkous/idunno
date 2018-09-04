@@ -29,7 +29,8 @@ public class RecyclerViewTest extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 //    private String[] myDataset = {"boo", "you", "ha", "ha"};
-    private ArrayList<ActivityList> myDataset = new ArrayList<>();
+//    private ArrayList<ActivityList> myDataset = new ArrayList<>();
+    private ArrayList<String> myDataset = new ArrayList<>();
 
 //    private ArrayList<Drawable> myImages;
 //    Resources res = getResources();
