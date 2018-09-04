@@ -5,6 +5,7 @@ import android.animation.AnimatorSet;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.support.constraint.ConstraintLayout;
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -29,13 +31,14 @@ public class RecyclerViewTest extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 //    private String[] myDataset = {"boo", "you", "ha", "ha"};
-//    private ArrayList<ActivityList> myDataset = new ArrayList<>();
-    private ArrayList<String> myDataset = new ArrayList<>();
+    private ArrayList<ActivityList> myDataset = new ArrayList<>();
+//    private ArrayList<String> myDataset = new ArrayList<>();
 
 //    private ArrayList<Drawable> myImages;
 //    Resources res = getResources();
 //    Drawable image = ResourcesCompat.getDrawable(res, R.drawable.broken_ketchup,getTheme());
 //    Drawable image3 = ResourcesCompat.getDrawable(res, R.drawable.pooh_eeyore,getTheme());
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,7 @@ public class RecyclerViewTest extends AppCompatActivity {
 
         /** Adding items to my Arraylist that will be displayed in the recycler view*/
 //        myDataset.add("Gradients", )
-
+        myDataset.add("Testing Gradients", TestingGradients.class);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -57,25 +60,33 @@ public class RecyclerViewTest extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new MyAdapter(myDataset);
+        mAdapter = new MyAdapter(myDataset){
+            @Override
+            public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+                // create a new view
+                TextView v = (TextView) LayoutInflater.from(parent.getContext())
+                        .inflate(R.layout.list_item, parent, false);
+                v.setTextColor(Color.rgb(0,0,0));
+                ViewHolder vh = new ViewHolder(v);
+
+                /**
+                 * Creating an on click listener so that each item of the list opens TestingGradients
+                 */
+                vh.getAdapterPosition();
+                v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(RecyclerViewTest.this, TestingGradients.class);
+                        startActivity(intent);
+                    }
+                });
+
+                return vh;
+            }
+        };
         mRecyclerView.setAdapter(mAdapter);
 
-        /**
-         * Creating an on click listener so that each item of the list can open its
-         * activity and layout
-         */
-//        mRecyclerView.setOnClickListener(new AdapterView.OnClickListener(){
-//            @Override
-//            public void onClickItem (AdapterView<?> adapterView, View view, int position, long id){
-//                Intent intent = new Intent(this, .class);
-//                startActivity(intent);
-//
-//                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-//                    mMediaPlayer = MediaPlayer.create(NumbersActivity.this, words.get(position).getMediaResourceId());
-//                    mMediaPlayer.start();
-//                    mMediaPlayer.setOnCompletionListener(mCompletionListener);
-//                }
-//            }
-//        });
+
     }
 }
