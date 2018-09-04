@@ -36,22 +36,22 @@ public class ActivityList {
     }
 
     /** Setters and Getters */
-    void setName(String name){
+    public void setName(String name){
         mName = name;
     }
-    void setActivity(Activity activity){
+    public void setActivity(Activity activity){
         mActivity = activity;
     }
-    void setImage(Drawable image){
+    public void setImage(Drawable image){
         mImage = image;
     }
-    String getName(){
+    public String getName(){
         return mName;
     }
-    Activity getActivity(){
+    public Activity getActivity(){
         return mActivity;
     }
-    Drawable getImage(){
+    public Drawable getImage(){
         return mImage;
     }
 }
