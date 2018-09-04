@@ -13,7 +13,6 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     private ArrayList<String> mDataset;
-    private int mTextColor = 1;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -43,6 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // create a new view
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
+        v.setTextColor(Color.rgb(0,0,0));
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }

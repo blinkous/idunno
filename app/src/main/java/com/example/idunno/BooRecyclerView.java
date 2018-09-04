@@ -39,10 +39,10 @@ public class BooRecyclerView extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         /**
-         * Creating an adapter in which I override the onCreateViewHolder method to change the text
+         * Creating a new adapter using myDataset in which I override the
+         * onCreateViewHolder method to change the text
          * color of each list item to alternate between purple, orange and black
          */
-
         mAdapter = new MyAdapter(myDataset){
             @Override
             public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
